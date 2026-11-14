@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#7f1d1d">
   <link rel="alternate" hreflang="x-default" href="https://biodata.xestus.in/">
-  <title>Marriage Biodata Maker Online Free (বাংলা & English) | XESTUS</title>
-  <meta name="description" content="বিয়ের জন্য সুন্দর বায়োডাটা তৈরি করুন অনলাইনে সম্পূর্ণ বিনামূল্যে। Free marriage biodata maker for Bengali, Hindu, Muslim matrimony with instant A4 PDF download.">
-  <meta name="keywords" content="marriage biodata maker, bengali marriage biodata format, biyer biodata format pdf, shadi biodata online, wedding biodata free, xestus biodata">
+  <link rel="alternate" hreflang="en" href="https://biodata.xestus.in/">
+  <title>Marriage Biodata Maker Online Free | XESTUS</title>
+  <meta name="description" content="Create elegant matrimonial biodata online for wedding proposals. 100% free with Royal &amp; Floral frames, photo support, and instant A4 PDF download.">
+  <meta name="keywords" content="marriage biodata maker, wedding biodata maker, matrimonial cv format, shadi biodata online, biodata format pdf, xestus biodata">
   <link rel="canonical" href="https://biodata.xestus.in/">
 
   <meta property="og:title" content="Marriage Biodata Maker Online Free | XESTUS">
-  <meta property="og:description" content="তৈরি করুন বিয়ের বায়োডাটা মাত্র ২ মিনিটে সম্পূর্ণ বিনামূল্যে। Instant A4 PDF Download.">
+  <meta property="og:description" content="Create beautiful marriage biodata in 2 minutes completely free. Instant A4 PDF download.">
   <meta property="og:url" content="https://biodata.xestus.in/">
   <meta property="og:type" content="website">
 
@@ -23,7 +24,7 @@
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="styles.css">
@@ -40,7 +41,7 @@
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "INR"
+      "priceCurrency": "USD"
     }
   }
   </script>
@@ -53,23 +54,24 @@
       <div class="brand-icon"><i class="fa-solid fa-heart"></i></div>
       <div class="brand-text">
         <h1>XESTUS Marriage Biodata</h1>
-        <span>১০০% ফ্রি • বিয়ের বায়োডাটা মেকার</span>
+        <span>100% Free • Matrimonial Biodata Maker</span>
       </div>
     </a>
 
     <div class="header-controls">
       <div id="google_translate_element" style="display: inline-block;"></div>
+
       <div class="control-group">
-        <label for="themeSelect"><i class="fa-solid fa-palette"></i> ডিজাইন ফ্রেম:</label>
+        <label for="themeSelect"><i class="fa-solid fa-palette"></i> Design Frame:</label>
         <select id="themeSelect">
-          <option value="theme-royal">রাজকীয় লাল ও সোনালী (Royal Maroon)</option>
-          <option value="theme-floral">মার্জিত সবুজ ও পাতা (Floral Emerald)</option>
+          <option value="theme-royal">Royal Maroon &amp; Gold (Auspicious Frame)</option>
+          <option value="theme-floral">Floral Emerald (Natural Minimal)</option>
         </select>
       </div>
 
-      <button id="loadSampleBtn" class="btn btn-outline"><i class="fa-solid fa-wand-magic-sparkles"></i> নমুনা ডেটা</button>
-      <button id="clearBtn" class="btn btn-outline"><i class="fa-solid fa-rotate-left"></i> পরিষ্কার</button>
-      <button id="printBtn" class="btn btn-maroon"><i class="fa-solid fa-file-pdf"></i> প্রিন্ট / PDF ডাউনলোড</button>
+      <button id="loadSampleBtn" class="btn btn-outline"><i class="fa-solid fa-wand-magic-sparkles"></i> Demo Sample</button>
+      <button id="clearBtn" class="btn btn-outline"><i class="fa-solid fa-rotate-left"></i> Clear Form</button>
+      <button id="printBtn" class="btn btn-maroon"><i class="fa-solid fa-file-pdf"></i> Print / Download PDF</button>
     </div>
   </header>
 
@@ -81,24 +83,24 @@
       
       <!-- Heading & Blessings -->
       <div class="section-card">
-        <div class="section-card-header"><i class="fa-solid fa-om"></i> শিরোনাম ও শুভ আশীর্বাদ বার্তা</div>
+        <div class="section-card-header"><i class="fa-solid fa-heading"></i> Heading &amp; Blessing Title</div>
         <div class="section-card-body">
           <div class="form-group">
-            <label>উপরের মাঙ্গলিক বার্তা (Header Blessing)</label>
+            <label>Auspicious Blessing Header</label>
             <select id="blessingSelect">
+              <option value="MARRIAGE BIO-DATA">MARRIAGE BIO-DATA (Universal Neutral)</option>
+              <option value="|| Om Shri Ganeshay Namah ||">|| Om Shri Ganeshay Namah ||</option>
+              <option value="|| Bismillah-ir-Rahman-ir-Rahim ||">|| Bismillah-ir-Rahman-ir-Rahim ||</option>
               <option value="|| ওঁ শ্রী শ্রী প্রজাপতয়ে নমঃ ||">|| ওঁ শ্রী শ্রী প্রজাপতয়ে নমঃ ||</option>
-              <option value="|| শ্রী শ্রী গণেশায় নমঃ ||">|| শ্রী শ্রী গণেশায় নমঃ ||</option>
-              <option value="|| বিসমিল্লাহির রাহমানির রাহিম ||">|| বিসমিল্লাহির রাহমানির রাহিম ||</option>
-              <option value="|| শুভ বিবাহ ||">|| শুভ বিবাহ ||</option>
-              <option value="MARRIAGE BIO-DATA">MARRIAGE BIO-DATA (Neutral)</option>
+              <option value="WEDDING BIO-DATA">WEDDING BIO-DATA</option>
             </select>
           </div>
           <div class="form-group">
-            <label>মূল হেডিং (Main Title)</label>
+            <label>Document Sub-Title</label>
             <input type="text" id="bio_titleText" value="MARRIAGE BIO-DATA">
           </div>
           <div class="form-group">
-            <label>পাত্র/পাত্রীর ছবি (ঐচ্ছিক / Optional Photo)</label>
+            <label>Candidate Profile Photo (Optional)</label>
             <input type="file" id="bio_photo" accept="image/*">
           </div>
         </div>
@@ -106,83 +108,83 @@
 
       <!-- Personal Info -->
       <div class="section-card">
-        <div class="section-card-header"><i class="fa-solid fa-user"></i> ১. ব্যক্তিগত তথ্য (Personal Details)</div>
+        <div class="section-card-header"><i class="fa-solid fa-user"></i> 1. Personal Profile</div>
         <div class="section-card-body">
           <div class="form-group">
-            <label>সম্পূর্ণ নাম (Full Name)</label>
-            <input type="text" id="bio_name">
+            <label>Full Name</label>
+            <input type="text" id="bio_name" placeholder="e.g. Animesh Sen / Priyanshu Sharma">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>জন্ম তারিখ (Date of Birth)</label>
-              <input type="text" id="bio_dob">
+              <label>Date of Birth</label>
+              <input type="text" id="bio_dob" placeholder="e.g. 15th August 1998">
             </div>
             <div class="form-group">
-              <label>জন্ম সময় (Time of Birth)</label>
-              <input type="text" id="bio_tob">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>জন্ম স্থান (Place of Birth)</label>
-              <input type="text" id="bio_pob">
-            </div>
-            <div class="form-group">
-              <label>উচ্চতা (Height)</label>
-              <input type="text" id="bio_height">
+              <label>Time of Birth</label>
+              <input type="text" id="bio_tob" placeholder="e.g. 08:30 AM">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>বর্ণ (Complexion)</label>
-              <input type="text" id="bio_complexion">
+              <label>Place of Birth</label>
+              <input type="text" id="bio_pob" placeholder="e.g. Kolkata, West Bengal">
             </div>
             <div class="form-group">
-              <label>রক্তের গ্রুপ (Blood Group)</label>
-              <input type="text" id="bio_bloodGroup">
+              <label>Height</label>
+              <input type="text" id="bio_height" placeholder="e.g. 5 ft 10 in">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>মাতৃভাষা (Mother Tongue)</label>
-              <input type="text" id="bio_motherTongue">
+              <label>Complexion</label>
+              <input type="text" id="bio_complexion" placeholder="e.g. Fair / Very Fair">
             </div>
             <div class="form-group">
-              <label>বর্ণ ও গোত্র (Caste / Gotra)</label>
-              <input type="text" id="bio_caste">
+              <label>Blood Group</label>
+              <input type="text" id="bio_bloodGroup" placeholder="e.g. O+ Positive">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mother Tongue</label>
+              <input type="text" id="bio_motherTongue" placeholder="e.g. Bengali / Hindi / English">
+            </div>
+            <div class="form-group">
+              <label>Religion &amp; Caste / Gotra</label>
+              <input type="text" id="bio_caste" placeholder="e.g. Hindu, Brahmin (Sandilya Gotra)">
             </div>
           </div>
           <div class="form-group">
-            <label>রাশি / নক্ষত্র (Rashi / Zodiac)</label>
-            <input type="text" id="bio_rashi">
+            <label>Zodiac / Rashi (Optional)</label>
+            <input type="text" id="bio_rashi" placeholder="e.g. Libra / Tula">
           </div>
         </div>
       </div>
 
       <!-- Education & Career -->
       <div class="section-card">
-        <div class="section-card-header"><i class="fa-solid fa-graduation-cap"></i> ২. শিক্ষা ও পেশাগত তথ্য</div>
+        <div class="section-card-header"><i class="fa-solid fa-graduation-cap"></i> 2. Educational &amp; Professional Background</div>
         <div class="section-card-body">
           <div class="form-group">
-            <label>সর্বোচ্চ শিক্ষাগত যোগ্যতা</label>
-            <input type="text" id="bio_qualification">
+            <label>Highest Qualification</label>
+            <input type="text" id="bio_qualification" placeholder="e.g. B.Tech / MBA / Master's Degree">
           </div>
           <div class="form-group">
-            <label>কলেজ / বিশ্ববিদ্যালয়</label>
-            <input type="text" id="bio_university">
+            <label>College / University / Board</label>
+            <input type="text" id="bio_university" placeholder="e.g. Calcutta University / IIT / Jadavpur">
           </div>
           <div class="form-group">
-            <label>বর্তমান পেশা / চাকুরীর পদ</label>
-            <input type="text" id="bio_occupation">
+            <label>Current Profession / Job Title</label>
+            <input type="text" id="bio_occupation" placeholder="e.g. Senior Software Engineer / Manager">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>কোম্পানি / প্রতিষ্ঠানের নাম</label>
-              <input type="text" id="bio_companyName">
+              <label>Company / Organization Name</label>
+              <input type="text" id="bio_companyName" placeholder="e.g. Reputed MNC / Government Dept">
             </div>
             <div class="form-group">
-              <label>বাৎসরিক / মাসিক আয়</label>
-              <input type="text" id="bio_income">
+              <label>Annual / Monthly Income</label>
+              <input type="text" id="bio_income" placeholder="e.g. ₹12 LPA / ₹80,000 per month">
             </div>
           </div>
         </div>
@@ -190,34 +192,34 @@
 
       <!-- Family Info -->
       <div class="section-card">
-        <div class="section-card-header"><i class="fa-solid fa-people-roof"></i> ৩. পারিবারিক বিবরণ</div>
+        <div class="section-card-header"><i class="fa-solid fa-people-roof"></i> 3. Family Background</div>
         <div class="section-card-body">
           <div class="form-group">
-            <label>পিতার নাম ও পেশা</label>
-            <input type="text" id="bio_fatherName">
+            <label>Father's Name &amp; Profession</label>
+            <input type="text" id="bio_fatherName" placeholder="e.g. Father Name (Businessman / Officer)">
           </div>
           <div class="form-group">
-            <label>মাতার নাম ও পেশা</label>
-            <input type="text" id="bio_motherName">
+            <label>Mother's Name &amp; Profession</label>
+            <input type="text" id="bio_motherName" placeholder="e.g. Mother Name (Homemaker / Teacher)">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>ভাইয়ের বিবরণ (Brothers)</label>
-              <input type="text" id="bio_brother">
+              <label>Brothers</label>
+              <input type="text" id="bio_brother" placeholder="e.g. 1 Elder Brother (Married)">
             </div>
             <div class="form-group">
-              <label>বোনের বিবরণ (Sisters)</label>
-              <input type="text" id="bio_sister">
+              <label>Sisters</label>
+              <input type="text" id="bio_sister" placeholder="e.g. 1 Younger Sister (Studying)">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>আদি বাসস্থান (Native Place)</label>
-              <input type="text" id="bio_nativePlace">
+              <label>Native Place / Ancestral Town</label>
+              <input type="text" id="bio_nativePlace" placeholder="e.g. Kolkata / Bardhaman">
             </div>
             <div class="form-group">
-              <label>পারিবারিক মূল্যবোধ</label>
-              <input type="text" id="bio_familyType">
+              <label>Family Values</label>
+              <input type="text" id="bio_familyType" placeholder="e.g. Nuclear Family (Liberal &amp; Cultured)">
             </div>
           </div>
         </div>
@@ -225,29 +227,29 @@
 
       <!-- Contact Info -->
       <div class="section-card">
-        <div class="section-card-header"><i class="fa-solid fa-address-book"></i> ৪. যোগাযোগের ঠিকানা</div>
+        <div class="section-card-header"><i class="fa-solid fa-address-book"></i> 4. Contact Details</div>
         <div class="section-card-body">
           <div class="form-group">
-            <label>যোগাযোগের ব্যক্তি (Contact Person)</label>
-            <input type="text" id="bio_contactPerson">
+            <label>Contact Person</label>
+            <input type="text" id="bio_contactPerson" placeholder="e.g. Father / Brother Name">
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>ফোন নম্বর</label>
-              <input type="text" id="bio_phone">
+              <label>Phone Number</label>
+              <input type="text" id="bio_phone" placeholder="e.g. +91 98765 43210">
             </div>
             <div class="form-group">
-              <label>হোয়াটসঅ্যাপ নম্বর</label>
-              <input type="text" id="bio_whatsapp">
+              <label>WhatsApp Number</label>
+              <input type="text" id="bio_whatsapp" placeholder="e.g. +91 98765 43210">
             </div>
           </div>
           <div class="form-group">
-            <label>ইমেইল আইডি</label>
-            <input type="email" id="bio_email">
+            <label>Email Address</label>
+            <input type="email" id="bio_email" placeholder="e.g. family.contact@example.com">
           </div>
           <div class="form-group">
-            <label>স্থায়ী আবাসিক ঠিকানা</label>
-            <textarea id="bio_address" rows="2"></textarea>
+            <label>Residential Address</label>
+            <textarea id="bio_address" rows="2" placeholder="e.g. Flat 4B, City Enclave, Sector V, Kolkata - 700091"></textarea>
           </div>
         </div>
       </div>
@@ -257,10 +259,10 @@
     <!-- Right Live Canvas Preview -->
     <main class="preview-panel">
       <div class="preview-toolbar">
-        <span><i class="fa-solid fa-eye"></i> লাইভ A4 বায়োডাটা প্রিভিউ</span>
+        <span><i class="fa-solid fa-eye"></i> Live A4 Matrimonial Biodata Preview</span>
         <span>•</span>
         <button onclick="window.print()" class="btn btn-gold" style="padding: 0.25rem 0.75rem; font-size: 0.8rem;">
-          <i class="fa-solid fa-print"></i> এখনই প্রিন্ট / PDF করুন
+          <i class="fa-solid fa-print"></i> Quick Print / PDF
         </button>
       </div>
 
@@ -284,13 +286,13 @@
   <footer class="app-footer">
     <div class="footer-inner">
       <div>
-        <p>&copy; 2026 XESTUS Ecosystem. ১০০% গোপনীয়তা সুরক্ষিত — কোনো ডেটা সার্ভারে সংরক্ষণ করা হয় না।</p>
+        <p>&copy; 2026 XESTUS Ecosystem. 100% Privacy Protected — Zero server storage of personal information.</p>
       </div>
       <div class="footer-links">
-        <a href="about.html">আমাদের সম্পর্কে</a>
-        <a href="privacy.html">প্রাইভেসি পলিসি</a>
-        <a href="terms.html">ব্যবহারের শর্তাবলী</a>
-        <a href="contact.html">যোগাযোগ</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
         <a href="https://resume.xestus.in/" target="_blank">Resume Builder</a>
         <a href="https://resizer.xestus.in/" target="_blank">Photo Resizer</a>
         <a href="https://xestus.in/" target="_blank">XESTUS Hub</a>
@@ -302,7 +304,7 @@
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
-        pageLanguage: 'bn',
+        pageLanguage: 'en',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');

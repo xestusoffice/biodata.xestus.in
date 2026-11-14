@@ -19,8 +19,8 @@ const sampleDemoBio = {
   occupation: "Job Title / Profession",
   companyName: "Company / Organization Name",
   income: "₹ Annual / Monthly Income",
-  fatherName: "পিতার নাম ও পেশা",
-  motherName: "মাতার নাম ও পেশা",
+  fatherName: "Father's Name & Occupation",
+  motherName: "Mother's Name & Occupation",
   brother: "ভাইয়ের বিবরণ (থাকলে)",
   sister: "বোনের বিবরণ (থাকলে)",
   nativePlace: "আবাসিক জেলা ও স্থান",
@@ -143,14 +143,14 @@ function saveBio() {
 function renderPreview() {
   biodataPaper.className = `biodata-paper ${currentTheme}`;
 
-  const displayName = currentBio.name || '[পাত্র / পাত্রীর পূর্ণ নাম]';
-  const displayOcc = currentBio.occupation || '[পেশা / চাকরি]';
-  const displayEdu = currentBio.qualification || '[শিক্ষাগত যোগ্যতা]';
+  const displayName = currentBio.name || 'CANDIDATE FULL NAME';
+  const displayOcc = currentBio.occupation || 'Profession / Job Title';
+  const displayEdu = currentBio.qualification || '[Highest Qualification]';
   const isNameEmpty = !currentBio.name;
 
   const photoHtml = currentBio.photo 
     ? `<img src="${currentBio.photo}" class="biodata-photo" alt="${displayName}">`
-    : '<div style="width: 100px; height: 120px; border: 2px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #94a3b8; text-align: center; padding: 6px;">ছবি যোগ করুন (ঐচ্ছিক)</div>';
+    : '<div style="width: 100px; height: 120px; border: 2px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #94a3b8; text-align: center; padding: 6px;">Upload Photo (Optional)</div>';
 
   biodataPaper.innerHTML = `
     <header class="biodata-header">
@@ -172,55 +172,55 @@ function renderPreview() {
 
       <!-- Personal Info -->
       <div>
-        <div class="section-title"><i class="fa-solid fa-user"></i> ব্যক্তিগত তথ্য (Personal Details)</div>
+        <div class="section-title"><i class="fa-solid fa-user"></i> 1. Personal Profile</div>
         <table class="detail-table">
-          <tr><td class="label-col">নাম (Full Name)</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.name || '<span style="color:#94a3b8;">[নাম লিখুন]</span>'}</strong></td></tr>
-          <tr><td class="label-col">জন্ম তারিখ (Date of Birth)</td><td class="colon-col">:</td><td class="value-col">${currentBio.dob || '<span style="color:#94a3b8;">[জন্ম তারিখ লিখুন]</span>'}</td></tr>
-          ${currentBio.tob ? `<tr><td class="label-col">জন্ম সময় (Time of Birth)</td><td class="colon-col">:</td><td class="value-col">${currentBio.tob}</td></tr>` : ''}
-          ${currentBio.pob ? `<tr><td class="label-col">জন্ম স্থান (Place of Birth)</td><td class="colon-col">:</td><td class="value-col">${currentBio.pob}</td></tr>` : ''}
-          <tr><td class="label-col">উচ্চতা (Height)</td><td class="colon-col">:</td><td class="value-col">${currentBio.height || '<span style="color:#94a3b8;">[উচ্চতা লিখুন]</span>'}</td></tr>
-          <tr><td class="label-col">বর্ণ (Complexion)</td><td class="colon-col">:</td><td class="value-col">${currentBio.complexion || '<span style="color:#94a3b8;">[গায়ের বর্ণ]</span>'}</td></tr>
-          <tr><td class="label-col">রক্তের গ্রুপ (Blood Group)</td><td class="colon-col">:</td><td class="value-col">${currentBio.bloodGroup || '<span style="color:#94a3b8;">[রক্তের গ্রুপ]</span>'}</td></tr>
-          <tr><td class="label-col">মাতৃভাষা (Mother Tongue)</td><td class="colon-col">:</td><td class="value-col">${currentBio.motherTongue || 'বাংলা'}</td></tr>
-          ${currentBio.caste ? `<tr><td class="label-col">বর্ণ ও গোত্র (Caste & Gotra)</td><td class="colon-col">:</td><td class="value-col">${currentBio.caste}</td></tr>` : ''}
-          ${currentBio.rashi ? `<tr><td class="label-col">রাশি (Zodiac / Rashi)</td><td class="colon-col">:</td><td class="value-col">${currentBio.rashi}</td></tr>` : ''}
+          <tr><td class="label-col">Full Name</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.name || '<span style="color:#94a3b8;">[নাম লিখুন]</span>'}</strong></td></tr>
+          <tr><td class="label-col">Date of Birth</td><td class="colon-col">:</td><td class="value-col">${currentBio.dob || '<span style="color:#94a3b8;">[জন্ম তারিখ লিখুন]</span>'}</td></tr>
+          ${currentBio.tob ? `<tr><td class="label-col">Time of Birth</td><td class="colon-col">:</td><td class="value-col">${currentBio.tob}</td></tr>` : ''}
+          ${currentBio.pob ? `<tr><td class="label-col">Place of Birth</td><td class="colon-col">:</td><td class="value-col">${currentBio.pob}</td></tr>` : ''}
+          <tr><td class="label-col">Height</td><td class="colon-col">:</td><td class="value-col">${currentBio.height || '<span style="color:#94a3b8;">[উচ্চতা লিখুন]</span>'}</td></tr>
+          <tr><td class="label-col">Complexion</td><td class="colon-col">:</td><td class="value-col">${currentBio.complexion || '<span style="color:#94a3b8;">[গায়ের বর্ণ]</span>'}</td></tr>
+          <tr><td class="label-col">Blood Group</td><td class="colon-col">:</td><td class="value-col">${currentBio.bloodGroup || '<span style="color:#94a3b8;">[রক্তের গ্রুপ]</span>'}</td></tr>
+          <tr><td class="label-col">Mother Tongue</td><td class="colon-col">:</td><td class="value-col">${currentBio.motherTongue || 'বাংলা'}</td></tr>
+          ${currentBio.caste ? `<tr><td class="label-col">Religion / Caste & Gotra</td><td class="colon-col">:</td><td class="value-col">${currentBio.caste}</td></tr>` : ''}
+          ${currentBio.rashi ? `<tr><td class="label-col">Zodiac / Rashi</td><td class="colon-col">:</td><td class="value-col">${currentBio.rashi}</td></tr>` : ''}
         </table>
       </div>
 
       <!-- Education & Career -->
       <div>
-        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> শিক্ষা ও পেশাগত তথ্য (Education & Career)</div>
+        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> 2. Educational & Professional Background</div>
         <table class="detail-table">
           <tr><td class="label-col">শিক্ষাগত যোগ্যতা</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.qualification || '<span style="color:#94a3b8;">[ডিগ্রি বা শিক্ষাগত যোগ্যতা]</span>'}</strong></td></tr>
-          <tr><td class="label-col">কলেজ / বিশ্ববিদ্যালয়</td><td class="colon-col">:</td><td class="value-col">${currentBio.university || '<span style="color:#94a3b8;">[কলেজ বা বোর্ডের নাম]</span>'}</td></tr>
-          <tr><td class="label-col">বর্তমান পেশা (Profession)</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.occupation || '<span style="color:#94a3b8;">[পেশা বা কাজের বিবরণ]</span>'}</strong></td></tr>
-          ${currentBio.companyName ? `<tr><td class="label-col">প্রতিষ্ঠানের নাম</td><td class="colon-col">:</td><td class="value-col">${currentBio.companyName}</td></tr>` : ''}
-          ${currentBio.income ? `<tr><td class="label-col">বাৎসরিক আয় (Income)</td><td class="colon-col">:</td><td class="value-col">${currentBio.income}</td></tr>` : ''}
+          <tr><td class="label-col">College / University</td><td class="colon-col">:</td><td class="value-col">${currentBio.university || '<span style="color:#94a3b8;">[কলেজ বা বোর্ডের নাম]</span>'}</td></tr>
+          <tr><td class="label-col">Current Profession</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.occupation || '<span style="color:#94a3b8;">[পেশা বা কাজের বিবরণ]</span>'}</strong></td></tr>
+          ${currentBio.companyName ? `<tr><td class="label-col">Company / Organization</td><td class="colon-col">:</td><td class="value-col">${currentBio.companyName}</td></tr>` : ''}
+          ${currentBio.income ? `<tr><td class="label-col">Annual / Monthly Income</td><td class="colon-col">:</td><td class="value-col">${currentBio.income}</td></tr>` : ''}
         </table>
       </div>
 
       <!-- Family Details -->
       <div>
-        <div class="section-title"><i class="fa-solid fa-people-roof"></i> পারিবারিক বিবরণ (Family Details)</div>
+        <div class="section-title"><i class="fa-solid fa-people-roof"></i> 3. Family Background</div>
         <table class="detail-table">
           <tr><td class="label-col">পিতার নাম ও পেশা</td><td class="colon-col">:</td><td class="value-col">${currentBio.fatherName || '<span style="color:#94a3b8;">[পিতার নাম ও পেশা]</span>'}</td></tr>
           <tr><td class="label-col">মাতার নাম ও পেশা</td><td class="colon-col">:</td><td class="value-col">${currentBio.motherName || '<span style="color:#94a3b8;">[মাতার নাম ও পেশা]</span>'}</td></tr>
-          ${currentBio.brother ? `<tr><td class="label-col">ভাই (Brothers)</td><td class="colon-col">:</td><td class="value-col">${currentBio.brother}</td></tr>` : ''}
-          ${currentBio.sister ? `<tr><td class="label-col">বোন (Sisters)</td><td class="colon-col">:</td><td class="value-col">${currentBio.sister}</td></tr>` : ''}
-          <tr><td class="label-col">আদি বাসস্থান (Native)</td><td class="colon-col">:</td><td class="value-col">${currentBio.nativePlace || '<span style="color:#94a3b8;">[জেলা বা এলাকার নাম]</span>'}</td></tr>
-          ${currentBio.familyType ? `<tr><td class="label-col">পারিবারিক ধরন</td><td class="colon-col">:</td><td class="value-col">${currentBio.familyType}</td></tr>` : ''}
+          ${currentBio.brother ? `<tr><td class="label-col">Brothers</td><td class="colon-col">:</td><td class="value-col">${currentBio.brother}</td></tr>` : ''}
+          ${currentBio.sister ? `<tr><td class="label-col">Sisters</td><td class="colon-col">:</td><td class="value-col">${currentBio.sister}</td></tr>` : ''}
+          <tr><td class="label-col">Native Place</td><td class="colon-col">:</td><td class="value-col">${currentBio.nativePlace || '<span style="color:#94a3b8;">[জেলা বা এলাকার নাম]</span>'}</td></tr>
+          ${currentBio.familyType ? `<tr><td class="label-col">Family Type</td><td class="colon-col">:</td><td class="value-col">${currentBio.familyType}</td></tr>` : ''}
         </table>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <div class="section-title"><i class="fa-solid fa-address-book"></i> যোগাযোগের ঠিকানা (Contact Information)</div>
+        <div class="section-title"><i class="fa-solid fa-address-book"></i> 4. Contact Details</div>
         <table class="detail-table">
-          <tr><td class="label-col">যোগাযোগের ব্যক্তি</td><td class="colon-col">:</td><td class="value-col">${currentBio.contactPerson || '<span style="color:#94a3b8;">[অভিভাবকের নাম]</span>'}</td></tr>
-          <tr><td class="label-col">ফোন নম্বর</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.phone || '<span style="color:#94a3b8;">[মোবাইল নম্বর]</span>'}</strong></td></tr>
-          ${currentBio.whatsapp ? `<tr><td class="label-col">হোয়াটসঅ্যাপ নম্বর</td><td class="colon-col">:</td><td class="value-col">${currentBio.whatsapp}</td></tr>` : ''}
-          ${currentBio.email ? `<tr><td class="label-col">ইমেইল</td><td class="colon-col">:</td><td class="value-col">${currentBio.email}</td></tr>` : ''}
-          <tr><td class="label-col">স্থায়ী ঠিকানা</td><td class="colon-col">:</td><td class="value-col">${currentBio.address || '<span style="color:#94a3b8;">[ঠিকানা লিখুন]</span>'}</td></tr>
+          <tr><td class="label-col">Contact Person</td><td class="colon-col">:</td><td class="value-col">${currentBio.contactPerson || '<span style="color:#94a3b8;">[অভিভাবকের নাম]</span>'}</td></tr>
+          <tr><td class="label-col">Phone Number</td><td class="colon-col">:</td><td class="value-col"><strong>${currentBio.phone || '<span style="color:#94a3b8;">[মোবাইল নম্বর]</span>'}</strong></td></tr>
+          ${currentBio.whatsapp ? `<tr><td class="label-col">WhatsApp Number</td><td class="colon-col">:</td><td class="value-col">${currentBio.whatsapp}</td></tr>` : ''}
+          ${currentBio.email ? `<tr><td class="label-col">Email Address</td><td class="colon-col">:</td><td class="value-col">${currentBio.email}</td></tr>` : ''}
+          <tr><td class="label-col">Residential Address</td><td class="colon-col">:</td><td class="value-col">${currentBio.address || '<span style="color:#94a3b8;">[ঠিকানা লিখুন]</span>'}</td></tr>
         </table>
       </div>
 
